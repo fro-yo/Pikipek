@@ -44,11 +44,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         let requestToken = BDBOAuth1Credential (queryString: url.query)
-        let twitterClient = BDBOAuth1SessionManager (baseURL: URL(string: "https://api.twitter.com"), consumerKey: "Ei2yvsY4UqCICBxWitWTdZnpK", consumerSecret:"SPHmekVh1thRGAMZB27kA9H9EY2gnT0p34Xv7QcA36VmXOaqpu" );
+        let twitterClient = BDBOAuth1SessionManager (baseURL: URL(string: "https://api.twitter.com"), consumerKey: "Ei2yvsY4UqCICBxWitWTdZnpK", consumerSecret:"SPHmekVh1thRGAMZB27kA9H9EY2gnT0p34Xv7QcA36VmXOaqpu" )!;
         
-        twitterClient?.fetchAccessToken(withPath: "oauth/access_token", method: "POST", requestToken: requestToken, success:
+        twitterClient.fetchAccessToken(withPath: "oauth/access_token", method: "POST", requestToken: requestToken, success:
             {(accessToken: BDBOAuth1Credential?) -> Void in
-                print ("got access token")
+                
+                
+                /************************
+                 * Tweets
+                 ************************/
+                twitterClient.get("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: {
+                    (task:URLSessionDataTask, response: Any?) in
+                    
+                    let tweets = response as? [NSDictionary]
+                    let tweetArray = Tweet.getTweetArray(dictionaries: tweets!)
+                    
+                    for tweet in tweetArray {
+                        print ("\(tweet.text)")
+                    }
+                    
+                }, failure: {
+                    (task: URLSessionDataTask?, error: Error) in
+                    print ("error in fetching tweets")
+                })
+                
+                /************************
+                 * Users
+                 ************************/
+                twitterClient.get("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: {
+                    (task:URLSessionDataTask, response: Any?) in
+                    
+                    let userInfo = response as? NSDictionary
+                    let user = User (dictionary: userInfo!)
+                    
+                    print ("\(user.name!)")
+                    
+                }, failure: {
+                    (task: URLSessionDataTask?, error: Error) in
+                    print ("error in fetching tweets")
+                })
+                
         }
             , failure: {
                 (error: Error?) -> Void in
