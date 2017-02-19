@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D8015E31E59306D00F0D3CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8015E21E59306D00F0D3CD /* User.swift */; };
 		3D8015E51E59319600F0D3CD /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8015E41E59319600F0D3CD /* Tweet.swift */; };
+		3D8015E81E59709300F0D3CD /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8015E71E59709300F0D3CD /* TwitterClient.swift */; };
+		3D8015EA1E59892400F0D3CD /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8015E91E59892400F0D3CD /* TweetsViewController.swift */; };
 		3D9B51B41E57FEDB0035B326 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B51B31E57FEDB0035B326 /* LoginViewController.swift */; };
 		3DF3267C1E577731007A7446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3267B1E577731007A7446 /* AppDelegate.swift */; };
 		3DF326811E577731007A7446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3267F1E577731007A7446 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		3D8015E21E59306D00F0D3CD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3D8015E41E59319600F0D3CD /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		3D8015E71E59709300F0D3CD /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		3D8015E91E59892400F0D3CD /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 		3D9B51B31E57FEDB0035B326 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3DF326781E577731007A7446 /* Pikipek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikipek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF3267B1E577731007A7446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,10 +57,19 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		3D8015E61E59706D00F0D3CD /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				3D8015E71E59709300F0D3CD /* TwitterClient.swift */,
+			);
+			name = "API Client";
+			sourceTree = "<group>";
+		};
 		3D9B51B21E57FEB30035B326 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3D9B51B31E57FEDB0035B326 /* LoginViewController.swift */,
+				3D8015E91E59892400F0D3CD /* TweetsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -82,6 +95,7 @@
 		3DF3267A1E577731007A7446 /* Pikipek */ = {
 			isa = PBXGroup;
 			children = (
+				3D8015E61E59706D00F0D3CD /* API Client */,
 				3D8015E11E59305600F0D3CD /* Models */,
 				3D9B51B21E57FEB30035B326 /* Controllers */,
 				3DF3267B1E577731007A7446 /* AppDelegate.swift */,
@@ -234,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8015E81E59709300F0D3CD /* TwitterClient.swift in Sources */,
 				3D9B51B41E57FEDB0035B326 /* LoginViewController.swift in Sources */,
+				3D8015EA1E59892400F0D3CD /* TweetsViewController.swift in Sources */,
 				3DF3267C1E577731007A7446 /* AppDelegate.swift in Sources */,
 				3D8015E31E59306D00F0D3CD /* User.swift in Sources */,
 				3D8015E51E59319600F0D3CD /* Tweet.swift in Sources */,

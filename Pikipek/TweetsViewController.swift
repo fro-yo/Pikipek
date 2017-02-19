@@ -1,19 +1,29 @@
 //
-//  LoginViewController.swift
+//  TweetsViewController.swift
 //  Pikipek
 //
-//  Created by Ajeya Rengarajan on 2/17/17.
+//  Created by Ajeya Rengarajan on 2/19/17.
 //  Copyright © 2017 Ajeya Rengarajan. All rights reserved.
 //
 
 import UIKit
-import BDBOAuth1Manager
 
-class LoginViewController: UIViewController {
+class TweetsViewController: UIViewController {
 
+    var tweets: [Tweet] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        TwitterClient.client.getTweets(success: { (tweetArray: [Tweet]) in
+            self.tweets = tweetArray
+            print (tweetArray.count)
+            for tweet in tweetArray{
+                print ("\(tweet.text!)")
+            }
+        }) { (error: Error) in
+            print ("error getting tweets: \(error.localizedDescription)")
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -23,15 +33,6 @@ class LoginViewController: UIViewController {
     }
     
 
-    @IBAction func loginButton(_ sender: Any) {
-        TwitterClient.client.login (success: {
-            print ("Logged In!")
-            self.performSegue(withIdentifier: "loginSegue", sender: nil)
-        }, failure: { (error: Error) in
-            print ("Error logging in: \(error.localizedDescription)")
-        })
-    }
-    
     /*
     // MARK: - Navigation
 
