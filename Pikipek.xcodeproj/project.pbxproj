@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D9B51B41E57FEDB0035B326 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B51B31E57FEDB0035B326 /* LoginViewController.swift */; };
 		3DF3267C1E577731007A7446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3267B1E577731007A7446 /* AppDelegate.swift */; };
-		3DF3267E1E577731007A7446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3267D1E577731007A7446 /* ViewController.swift */; };
 		3DF326811E577731007A7446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3267F1E577731007A7446 /* Main.storyboard */; };
 		3DF326831E577731007A7446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF326821E577731007A7446 /* Assets.xcassets */; };
 		3DF326861E577731007A7446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF326841E577731007A7446 /* LaunchScreen.storyboard */; };
+		BF42FE7761DB96979B207486 /* Pods_Pikipek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567447876AAA8F15D9D8278A /* Pods_Pikipek.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D9B51B31E57FEDB0035B326 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3DF326781E577731007A7446 /* Pikipek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikipek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF3267B1E577731007A7446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DF3267D1E577731007A7446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DF326801E577731007A7446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DF326821E577731007A7446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF326851E577731007A7446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DF326871E577731007A7446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E92448296DE335A473C7995 /* Pods-Pikipek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pikipek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pikipek/Pods-Pikipek.release.xcconfig"; sourceTree = "<group>"; };
+		567447876AAA8F15D9D8278A /* Pods_Pikipek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pikipek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA48D93753ECF4AD8DA77E0 /* Pods-Pikipek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pikipek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pikipek/Pods-Pikipek.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF42FE7761DB96979B207486 /* Pods_Pikipek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D9B51B21E57FEB30035B326 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D9B51B31E57FEDB0035B326 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		3DF3266F1E577731007A7446 = {
 			isa = PBXGroup;
 			children = (
 				3DF3267A1E577731007A7446 /* Pikipek */,
 				3DF326791E577731007A7446 /* Products */,
+				7A9042118F5B9B7DA47A2A70 /* Pods */,
+				F71C9D2B878DC059FA7A70E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,31 @@
 		3DF3267A1E577731007A7446 /* Pikipek */ = {
 			isa = PBXGroup;
 			children = (
+				3D9B51B21E57FEB30035B326 /* Controllers */,
 				3DF3267B1E577731007A7446 /* AppDelegate.swift */,
-				3DF3267D1E577731007A7446 /* ViewController.swift */,
 				3DF3267F1E577731007A7446 /* Main.storyboard */,
 				3DF326821E577731007A7446 /* Assets.xcassets */,
 				3DF326841E577731007A7446 /* LaunchScreen.storyboard */,
 				3DF326871E577731007A7446 /* Info.plist */,
 			);
 			path = Pikipek;
+			sourceTree = "<group>";
+		};
+		7A9042118F5B9B7DA47A2A70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEA48D93753ECF4AD8DA77E0 /* Pods-Pikipek.debug.xcconfig */,
+				4E92448296DE335A473C7995 /* Pods-Pikipek.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F71C9D2B878DC059FA7A70E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567447876AAA8F15D9D8278A /* Pods_Pikipek.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF3268A1E577731007A7446 /* Build configuration list for PBXNativeTarget "Pikipek" */;
 			buildPhases = (
+				4C2B34DEBFE6660CD353C490 /* [CP] Check Pods Manifest.lock */,
 				3DF326741E577731007A7446 /* Sources */,
 				3DF326751E577731007A7446 /* Frameworks */,
 				3DF326761E577731007A7446 /* Resources */,
+				C40B439CB41079DFF01776D1 /* [CP] Embed Pods Frameworks */,
+				624B50AF4CED87B203132151 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +167,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C2B34DEBFE6660CD353C490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		624B50AF4CED87B203132151 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pikipek/Pods-Pikipek-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C40B439CB41079DFF01776D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pikipek/Pods-Pikipek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DF326741E577731007A7446 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF3267E1E577731007A7446 /* ViewController.swift in Sources */,
+				3D9B51B41E57FEDB0035B326 /* LoginViewController.swift in Sources */,
 				3DF3267C1E577731007A7446 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +342,7 @@
 		};
 		3DF3268B1E577731007A7446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA48D93753ECF4AD8DA77E0 /* Pods-Pikipek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 26995U26P3;
@@ -272,6 +356,7 @@
 		};
 		3DF3268C1E577731007A7446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E92448296DE335A473C7995 /* Pods-Pikipek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 26995U26P3;
@@ -302,6 +387,7 @@
 				3DF3268C1E577731007A7446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_Pikipek {
+  umbrella header "Pods-Pikipek-umbrella.h"
+
+  export *
+  module * { export * }
+}
